@@ -225,16 +225,7 @@ export default function App() {
 
           {/* Zone 3: Primary Action & Mobile Menu Button */}
           <div className="flex items-center gap-2 sm:gap-3">
-            <a
-              href="/download/maria-helena-nutri.zip"
-              download="maria-helena-nutri.zip"
-              className="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-semibold text-[#2C3531] bg-white border border-[#E8E4DC] hover:border-[#7E9777] hover:bg-[#F2F5F1] transition-all shadow-xs"
-              title="Baixar arquivo ZIP completo pronto para VS Code e Vercel"
-            >
-              <Download className="w-3.5 h-3.5 text-[#7E9777]" />
-              <span>Baixar ZIP</span>
-            </a>
-
+          
             <button
               onClick={() => setBookingModalOpen(true)}
               className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold text-white bg-[#C87D65] hover:bg-[#B56B53] shadow-sm hover:shadow transition-all duration-200 cursor-pointer whitespace-nowrap"
