@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maria Helena | Nutricionista - Resultados Reais Sem Neuras</title>
+  <meta name="description" content="Atendimento nutricional presencial e online com Maria Helena. Conquiste resultados reais com hábitos práticos e sem restrições radicais.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              DEFAULT: '#7E9777',
+              dark: '#6A8264',
+              light: '#F2F5F1'
+            },
+            terracotta: {
+              DEFAULT: '#C87D65',
+              dark: '#B56B53'
+            },
+            cream: {
+              DEFAULT: '#FDFBF7',
+              dark: '#F7F4EF'
+            },
+            graphite: {
+              DEFAULT: '#2C3531',
+              muted: '#55635D'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: #FDFBF7;
+      color: #2C3531;
+    }
+    h1, h2, h3, .font-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .glass-nav {
+      background: rgba(253, 251, 247, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    @keyframes softPulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(200, 125, 101, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 0 10px rgba(200, 125, 101, 0);
+      }
+    }
+    .pulse-cta {
+      animation: softPulse 2.8s infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#FDFBF7] text-[#2C3531] antialiased selection:bg-[#C87D65]/20 selection:text-[#2C3531]">
+
+  <!-- HEADER / NAVBAR -->
+  <header class="sticky top-0 z-40 w-full glass-nav border-b border-[#E8E4DC]/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <a href="#" class="text-2xl font-serif font-bold text-[#2C3531] hover:text-[#7E9777] transition-colors">
+        Maria Helena <span class="font-sans text-xs uppercase tracking-widest text-[#7E9777] font-semibold ml-1.5">Nutri</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-[#424E48]">
+        <a href="#sobre" class="hover:text-[#C87D65] transition-colors">Sobre</a>
+        <a href="#diferenciais" class="hover:text-[#C87D65] transition-colors">Diferenciais</a>
+        <a href="#servicos" class="hover:text-[#C87D65] transition-colors">Serviços</a>
+        <a href="#metodologia" class="hover:text-[#C87D65] transition-colors">Como Funciona</a>
+        <a href="#depoimentos" class="hover:text-[#C87D65] transition-colors">Depoimentos</a>
+        <a href="#faq" class="hover:text-[#C87D65] transition-colors">Dúvidas</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button onclick="openBookingModal()" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold text-white bg-[#C87D65] hover:bg-[#B56B53] shadow-sm transition-all cursor-pointer">
+          Agendar Consulta
+        </button>
+        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-[#2C3531]" aria-label="Abrir Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-[#E8E4DC] bg-[#FDFBF7] px-6 py-6 shadow-xl">
+      <nav class="flex flex-col gap-4 text-base font-medium text-[#2C3531]">
+        <a href="#sobre" onclick="toggleMobileMenu()" class="py-1 border-b border-[#E8E4DC]/40">Sobre</a>
+        <a href="#diferenciais" onclick="toggleMobileMenu()" class="py-1 border-b border-[#E8E4DC]/40">Diferenciais</a>
+        <a href="#servicos" onclick="toggleMobileMenu()" class="py-1 border-b border-[#E8E4DC]/40">Serviços</a>
+        <a href="#metodologia" onclick="toggleMobileMenu()" class="py-1 border-b border-[#E8E4DC]/40">Como Funciona</a>
+        <a href="#depoimentos" onclick="toggleMobileMenu()" class="py-1 border-b border-[#E8E4DC]/40">Depoimentos</a>
+        <a href="#faq" onclick="toggleMobileMenu()" class="py-1 border-b border-[#E8E4DC]/40">Dúvidas</a>
+        <div class="pt-2 flex flex-col gap-2">
+          <a href="https://wa.link/h06xi8" target="_blank" class="w-full text-center py-3 rounded-xl text-sm font-semibold text-white bg-[#7E9777]">Agendar Presencial</a>
+          <a href="https://wa.link/hxzvpm" target="_blank" class="w-full text-center py-3 rounded-xl text-sm font-semibold text-[#2C3531] border border-[#C87D65]">Agendar Online</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden pt-8 pb-16 md:pt-14 md:pb-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <div class="lg:col-span-7 flex flex-col items-start">
+          <div class="flex items-center gap-2 text-xs sm:text-sm font-medium text-[#7E9777] uppercase tracking-wider mb-3">
+            <span>Nutrição Clínica & Comportamental</span>
+            <span aria-hidden="true">·</span>
+            <span>Atendimento Presencial & Online</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#2C3531] leading-tight mb-6">
+            Conquiste resultados reais com hábitos práticos e <span class="italic font-normal text-[#C87D65]">sem neuras.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-[#55635D] leading-relaxed mb-8 max-w-xl">
+            Um acompanhamento nutricional acolhedor e baseado na sua rotina real. Esqueça restrições radicais: aprenda a comer com prazer, autonomia e constância para viver a sua melhor versão.
+          </p>
+
+          <div class="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-8">
+            <a href="https://wa.link/h06xi8" target="_blank" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold text-white bg-[#C87D65] hover:bg-[#B56B53] shadow-md pulse-cta">
+              <span>Consulta Presencial</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="https://wa.link/hxzvpm" target="_blank" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold text-[#2C3531] bg-white border border-[#8A9A86]/70 hover:bg-[#F2F5F1]">
+              <span>Consulta Online</span>
+              <svg class="w-3.5 h-3.5 text-[#55635D]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+
+          <div class="pt-4 border-t border-[#E8E4DC] w-full flex flex-wrap items-center gap-y-2 gap-x-5 text-xs sm:text-sm text-[#63706A]">
+            <span>✨ +500 pacientes transformados</span>
+            <span aria-hidden="true">·</span>
+            <span>Planos 100% individualizados</span>
+            <span aria-hidden="true">·</span>
+            <span>Suporte direto no WhatsApp</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-sm sm:max-w-md">
+            <div class="relative rounded-[2rem] overflow-hidden bg-white shadow-xl border border-[#E8E4DC]">
+              <img src="/assets/maria_helena_portrait_1790112580363.jpg" alt="Nutricionista Maria Helena" class="w-full h-auto object-cover aspect-[3/4]">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <p class="text-base font-serif font-medium">Maria Helena</p>
+                <p class="text-xs text-white/90">Nutricionista Clínica & Funcional</p>
+              </div>
+            </div>
+            <div class="absolute -bottom-6 -left-3 sm:-left-6 glass-card p-4 rounded-2xl border border-white/80 shadow-lg max-w-[240px]">
+              <p class="text-xs font-semibold text-[#2C3531]">Sem dietas restritivas</p>
+              <p class="text-[11px] text-[#63706A]">Nutrição com leveza e empatia</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section id="diferenciais" class="py-16 md:py-20 bg-[#F7F4EF]/70 border-y border-[#E8E4DC]/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-semibold uppercase tracking-wider text-[#7E9777]">Pilares da Metodologia</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-[#2C3531] mt-2 mb-4">
+          Por que o acompanhamento com Maria Helena é diferente?
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-[#E8E4DC]">
+          <h3 class="text-lg font-serif font-semibold text-[#2C3531] mb-2">Sem Dietas Restritivas</h3>
+          <p class="text-sm text-[#55635D]">Chega de terrorismo alimentar. Você aprende a comer com equilíbrio, flexibilidade e mantendo os prazeres da vida.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-[#E8E4DC]">
+          <h3 class="text-lg font-serif font-semibold text-[#2C3531] mb-2">100% Personalizado</h3>
+          <p class="text-sm text-[#55635D]">Plano desenhado com você para a sua rotina real, orçamento e preferências gastronômicas.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-[#E8E4DC]">
+          <h3 class="text-lg font-serif font-semibold text-[#2C3531] mb-2">Suporte Contínuo</h3>
+          <p class="text-sm text-[#55635D]">Canal aberto no WhatsApp para tirar dúvidas de supermercado, restaurantes ou momentos de desafio.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-[#E8E4DC]">
+          <h3 class="text-lg font-serif font-semibold text-[#2C3531] mb-2">Rotina da Família</h3>
+          <p class="text-sm text-[#55635D]">Estratégias viáveis que integram a sua rotina sem a necessidade de cozinhar refeições separadas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS DUAIS -->
+  <section id="servicos" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-semibold uppercase tracking-wider text-[#C87D65]">Escolha o Seu Formato</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-[#2C3531] mt-2 mb-4">
+          Dois caminhos, o mesmo rigor e acolhimento
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Presencial -->
+        <div class="bg-white rounded-3xl overflow-hidden border border-[#E8E4DC] p-8 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-[#7E9777]">Consultório</span>
+            <h3 class="text-2xl font-serif font-bold text-[#2C3531] mt-1 mb-3">Consulta Presencial</h3>
+            <p class="text-sm text-[#55635D] mb-6">Foco em acompanhamento de perto, ambiente calmo e avaliação física com bioimpedância e medidas corporais detalhadas.</p>
+            <ul class="space-y-3 text-sm text-[#424E48] mb-8">
+              <li>✓ Avaliação corporal completa (Bioimpedância e medidas)</li>
+              <li>✓ Anamnese clínica e alimentar aprofundada</li>
+              <li>✓ Plano alimentar alinhado e entregue na hora</li>
+              <li>✓ Guia prático de compras e substituições</li>
+              <li>✓ Suporte via WhatsApp entre consultas</li>
+            </ul>
+          </div>
+          <a href="https://wa.link/h06xi8" target="_blank" class="w-full text-center py-3.5 rounded-full text-sm font-semibold text-white bg-[#7E9777] hover:bg-[#6A8264] transition-colors">
+            Agendar Presencial no WhatsApp
+          </a>
+        </div>
+
+        <!-- Online -->
+        <div class="bg-white rounded-3xl overflow-hidden border border-[#E8E4DC] p-8 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-[#C87D65]">Brasil & Exterior</span>
+            <h3 class="text-2xl font-serif font-bold text-[#2C3531] mt-1 mb-3">Consulta Online</h3>
+            <p class="text-sm text-[#55635D] mb-6">Atendimento no conforto da sua casa para qualquer lugar do mundo, com o mesmo rigor e acompanhamento via app e WhatsApp.</p>
+            <ul class="space-y-3 text-sm text-[#424E48] mb-8">
+              <li>✓ Videochamada individual detalhada (Meet / Zoom)</li>
+              <li>✓ Protocolo prático de autoavaliação guiada</li>
+              <li>✓ Material digital interativo e receitas em PDF</li>
+              <li>✓ Acesso ao app de acompanhamento de refeições</li>
+              <li>✓ Suporte contínuo direto no WhatsApp</li>
+            </ul>
+          </div>
+          <a href="https://wa.link/hxzvpm" target="_blank" class="w-full text-center py-3.5 rounded-full text-sm font-semibold text-white bg-[#C87D65] hover:bg-[#B56B53] transition-colors">
+            Agendar Online no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULADORA DE HIDRATAÇÃO -->
+  <section class="py-14 bg-white border-t border-[#E8E4DC]">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-serif font-bold text-[#2C3531] mb-2">Calculadora de Meta Hídrica Diária</h2>
+      <p class="text-sm text-[#55635D] mb-6">Ajuste seu peso e veja a quantidade ideal de água recomendada pela nutri:</p>
+      
+      <div class="bg-[#FDFBF7] p-6 rounded-2xl border border-[#E8E4DC] max-w-md mx-auto">
+        <label for="weightInput" class="block text-xs font-semibold text-[#424E48] mb-2">Seu Peso: <span id="weightVal" class="text-[#C87D65] font-bold">68 kg</span></label>
+        <input id="weightInput" type="range" min="40" max="140" value="68" oninput="calcWater(this.value)" class="w-full accent-[#7E9777]">
+        
+        <div class="mt-4 pt-4 border-t border-[#E8E4DC]">
+          <p class="text-xs uppercase tracking-wider text-[#7B8881]">Sua recomendação diária:</p>
+          <div id="waterVal" class="text-3xl font-serif font-bold text-[#7E9777] my-1">2.72 Litros/dia</div>
+          <p class="text-xs text-[#55635D]">Cerca de <span id="bottlesVal">5.4</span> garrafinhas de 500ml ao longo do dia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 md:py-24 bg-[#F7F4EF]/70 border-t border-[#E8E4DC]">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="text-xs font-semibold uppercase tracking-wider text-[#7E9777]">Tire Suas Dúvidas</span>
+        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#2C3531] mt-1">Perguntas Frequentes</h2>
+      </div>
+
+      <div class="space-y-3" id="faqList">
+        <div class="border border-[#E8E4DC] rounded-xl bg-white overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-serif font-semibold text-[#2C3531] flex justify-between items-center">
+            <span>Como funciona a consulta online?</span>
+            <span>+</span>
+          </button>
+          <div class="hidden p-5 pt-0 text-sm text-[#55635D] border-t border-[#E8E4DC]/40">
+            Acontece via Google Meet ou Zoom, com 1h de duração. Você recebe o plano digital, materiais e o suporte contínuo via WhatsApp.
+          </div>
+        </div>
+
+        <div class="border border-[#E8E4DC] rounded-xl bg-white overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-serif font-semibold text-[#2C3531] flex justify-between items-center">
+            <span>O plano alimentar é entregue na hora?</span>
+            <span>+</span>
+          </button>
+          <div class="hidden p-5 pt-0 text-sm text-[#55635D] border-t border-[#E8E4DC]/40">
+            Sim! Construímos as bases juntos na consulta e o documento completo com receitas e guia é enviado em até 24h úteis.
+          </div>
+        </div>
+
+        <div class="border border-[#E8E4DC] rounded-xl bg-white overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-serif font-semibold text-[#2C3531] flex justify-between items-center">
+            <span>Aceita convênio médico?</span>
+            <span>+</span>
+          </button>
+          <div class="hidden p-5 pt-0 text-sm text-[#55635D] border-t border-[#E8E4DC]/40">
+            O atendimento é particular para garantir acompanhamento próximo e dedicado. Fornecemos recibo detalhado para pedido de reembolso no seu plano.
+          </div>
+        </div>
+
+        <div class="border border-[#E8E4DC] rounded-xl bg-white overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-serif font-semibold text-[#2C3531] flex justify-between items-center">
+            <span>Preciso parar de comer o que gosto?</span>
+            <span>+</span>
+          </button>
+          <div class="hidden p-5 pt-0 text-sm text-[#55635D] border-t border-[#E8E4DC]/40">
+            Nunca! A nutrição comportamental prega o equilíbrio e a autonomia. Você aprende a comer tudo com consciência e moderação.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#2C3531] text-[#E8E4DC] py-12 border-t border-[#3F4B45]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+      <div>
+        <p class="text-xl font-serif font-bold text-white">Maria Helena | Nutricionista</p>
+        <p class="text-xs text-[#A7B4AD] mt-1">Resultados reais com hábitos alimentares práticos e sem neuras.</p>
+        <p class="text-xs text-[#8A9A86] mt-2">Email: mariahelenasouzareis7@gmail.com | Instagram: @maria.helena_nutri</p>
+      </div>
+      <div class="flex gap-4">
+        <a href="https://wa.link/h06xi8" target="_blank" class="px-4 py-2 rounded-full text-xs font-semibold bg-[#7E9777] text-white">Presencial</a>
+        <a href="https://wa.link/hxzvpm" target="_blank" class="px-4 py-2 rounded-full text-xs font-semibold bg-[#C87D65] text-white">Online</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div id="bookingModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs">
+    <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative">
+      <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-[#7B8881] text-lg font-bold">✕</button>
+      <h3 class="text-2xl font-serif font-bold text-[#2C3531] text-center mb-4">Escolha seu atendimento</h3>
+      <div class="space-y-3">
+        <a href="https://wa.link/h06xi8" target="_blank" class="block p-4 rounded-xl border border-[#7E9777] bg-[#FDFBF7] text-left hover:bg-[#F2F5F1]">
+          <p class="font-semibold text-[#2C3531]">Consulta Presencial</p>
+          <p class="text-xs text-[#7B8881]">Avaliação física e bioimpedância no consultório</p>
+        </a>
+        <a href="https://wa.link/hxzvpm" target="_blank" class="block p-4 rounded-xl border border-[#C87D65] bg-[#FDFBF7] text-left hover:bg-[#C87D65]/5">
+          <p class="font-semibold text-[#2C3531]">Consulta Online</p>
+          <p class="text-xs text-[#7B8881]">Videochamada no conforto da sua casa</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const m = document.getElementById('mobileMenu');
+      m.classList.toggle('hidden');
+    }
+    function openBookingModal() {
+      document.getElementById('bookingModal').classList.remove('hidden');
+    }
+    function closeBookingModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+    function toggleFaq(btn) {
+      const content = btn.nextElementSibling;
+      const isOpen = !content.classList.contains('hidden');
+      document.querySelectorAll('#faqList div div').forEach(el => el.classList.add('hidden'));
+      if (!isOpen) {
+        content.classList.remove('hidden');
+      }
+    }
+    function calcWater(weight) {
+      document.getElementById('weightVal').innerText = weight + ' kg';
+      const liters = ((weight * 40) / 1000).toFixed(2);
+      document.getElementById('waterVal').innerText = liters + ' Litros/dia';
+      document.getElementById('bottlesVal').innerText = (liters / 0.5).toFixed(1);
+    }
+  </script>
+</body>
+</html>

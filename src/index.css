@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    color: #2C3531;
+    background-color: #FDFBF7;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Glassmorphism & Soft Lighting */
+.glass-nav {
+  background: rgba(253, 251, 247, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Gentle Glow and Shadows */
+.soft-shadow {
+  box-shadow: 0 10px 30px -10px rgba(44, 53, 49, 0.06), 0 4px 12px -2px rgba(44, 53, 49, 0.03);
+}
+
+.card-hover {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -12px rgba(44, 53, 49, 0.1), 0 8px 16px -4px rgba(44, 53, 49, 0.04);
+}
+
+/* Custom pulse for CTA */
+@keyframes softPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(200, 125, 101, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(200, 125, 101, 0);
+  }
+}
+
+.pulse-cta {
+  animation: softPulse 2.8s infinite;
+}
+

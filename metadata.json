@@ -1,0 +1,6 @@
+{
+  "name": "Maria Helena Nutricionista - Nutrição Sem Neuras",
+  "description": "Landing page de alta conversão para a nutricionista Maria Helena (@maria.helena_nutri). Consultas presenciais e online com foco em resultados reais e hábitos saudáveis sem restrições radicais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
